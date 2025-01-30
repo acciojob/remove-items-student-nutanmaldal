@@ -18,9 +18,16 @@
 			</select> 
 			<input type="button" value="Select and Remove"> 
 		</form>
+	<script>
+        document.querySelector('input[type="button"]').addEventListener('click', function() {
+            let select = document.querySelector("#colorSelect");
+            let selectedIndex = select.selectedIndex;
 
-		<script type="text/javascript" src="./script.js">
-		</script>
+            if (selectedIndex !== -1) {
+                select.remove(selectedIndex);
+            }
+        });
+    </script>
 
 	</body>
 
